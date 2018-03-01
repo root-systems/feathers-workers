@@ -20,6 +20,22 @@ the "worker" service will listen for new jobs and process them on-demand.
 - [feathers](https://docs.feathersjs.com/)
 - [node-resque](https://github.com/taskrabbit/node-resque)
 
+## how to
+
+### start example locally
+
+```
+npm start
+```
+
+open the page in your brower, click the "trigger" button!
+
+TODO: on each message, the "web" service will queue a text processing job for the worker, which will create a new message.
+
+### deploy example to heroku
+
+TODO
+
 ## why make this repo?
 
 this example is the first step to deliver quality work for [Minded](https://www.mindedapp.com/)

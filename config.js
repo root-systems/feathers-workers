@@ -7,11 +7,11 @@ var config = {
     port: WEB_PORT,
     host: WEB_HOST,
     url: WEB_URL
+  },
+  redis: {
+    pkg: 'ioredis',
+    host: process.env.REDIS
   }
-}
-
-config.client = {
-  web: config.web
 }
 
 module.exports = config

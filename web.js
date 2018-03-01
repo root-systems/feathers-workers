@@ -27,11 +27,6 @@ app.configure(function (app) {
   })
 })
 
-// serve static files to browser
-app.use((req, res, next) => {
-  res.cookie('config', JSON.stringify(config.client))
-  next()
-})
 app.use(express.static('browser'))
 
 // fancy error page

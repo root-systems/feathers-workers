@@ -8,7 +8,7 @@ start()
 
 async function start () {
   const connection = {
-    redis: new Redis(config.redis)
+    redis: new Redis(config.redis.url)
   }
   const worker = await createWorker(connection)
   const scheduler = await createScheduler(connection)

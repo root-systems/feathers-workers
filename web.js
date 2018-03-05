@@ -20,7 +20,7 @@ async function setup () {
   app.configure(socketio())
 
   // connect to worker queue
-  const queueConnection = { redis: new Redis(app.get('redis')) }
+  const queueConnection = { redis: new Redis(app.get('redis.url')) }
   const jobs = Jobs(config)
   const queue = new Resque.Queue({ connection: queueConnection }, jobs)
   await queue.connect()

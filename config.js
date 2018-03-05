@@ -9,8 +9,7 @@ var config = {
     url: WEB_URL
   },
   redis: {
-    pkg: 'ioredis',
-    host: process.env.REDIS
+    url: process.env.REDIS_URL
   }
 }
 

@@ -9,7 +9,8 @@ const hooks = {
   after: {
     create (context) {
       const queue = context.app.get('queue')
-      queue.enqueue('feathers-workers', 'messagesExclaim', [1, 2])
+      const message = context.result
+      queue.enqueue('feathers-workers', 'messagesExclaim', [message.text])
     }
   }
 }
